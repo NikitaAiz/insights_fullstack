@@ -19,3 +19,6 @@ Each row has also a button that when clicked on, displays the ID of the phone in
 **You can keep track of your progress by looking at the final result screenshot**
 
 After completing the task, you should create a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to the repository with your changes. And let us know.
+
+Final Result Screenshot:
+<img width="1512" alt="Screenshot 2024-07-01 at 15 29 58" src="https://github.com/NikitaAiz/insights_fullstack/assets/73474213/92969c49-4172-474f-bcc9-fac74be7a8eb">
