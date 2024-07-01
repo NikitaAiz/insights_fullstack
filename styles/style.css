@@ -1,0 +1,22 @@
+h1 {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align: center;
+}
+
+#selected_id {
+  border-style: solid;
+
+  #result {
+    font-weight: bold;
+  }
+}
+
+.expensive_phone {
+  background-image: linear-gradient(to right, red, yellow);
+}
+
+.table {
+  tbody tr:nth-child(even) {
+    background-color: darkgrey;
+  }
+}

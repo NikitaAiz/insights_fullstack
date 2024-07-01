@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<link href="styles/style.css" rel="stylesheet" />
+<script>
+  // This works fine, no need to change
+  function sayHello() {
+    alert("hello!");
+  }
+
+  // This works fine, no need to change
+  function loadData() {
+    var xhr = new XMLHttpRequest();
+    var requestUrl = "https://api.restful-api.dev/objects";
+    xhr.open("GET", requestUrl, true);
+    xhr.onload = function () {
+      createTable(xhr);
+    };
+    xhr.send();
+  }
+
+  function attachButtonEvents() {
+    var buttons = document.getElementsByTagName("button");
+
+    for (var index = 0; index < buttons.length; index++) {
+      var currentButton = buttons[index];
+      currentButton.onclick = function () {
+        document.getElementById("result").innerText = index + 1;
+      };
+    }
+  }
+
+  function createTable(xhr) {
+    var responseJson = JSON.parse(xhr.response);
+
+    var htmlString = "";
+
+    for (var index = 0; index < responseJson.length; index++) {
+      var element = responseJson[index];
+      htmlString += "<tr>";
+      htmlString += "<td class=phone_name >" + element.name + "</td>";
+      htmlString += "<td>" + element.color + "</td>";
+      htmlString += "<td>" + element.capacity + "</td>";
+      htmlString += "<td>" + (element.price || element.Price) + "</td>";
+      htmlString += "<td>" + element.generation + "</td>";
+      htmlString += "<td> <button> Get Id </button> </td>";
+      htmlString += "</tr>";
+    }
+
+    // Add rows and cells to HTML table
+    document.getElementById("phone_data").innerHTML += htmlString;
+
+    attachButtonEvents();
+  }
+
+  loadData();
+</script>
+<html>
+  <body>
+    <h1>My phone list</h1>
+
+    <!-- <button onclick="sayHello()">Hello</button> -->
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Capacity</th>
+            <th>Price</th>
+            <th>Generation</th>
+          </tr>
+        </thead>
+        <tbody id="phone_data"></tbody>
+      </table>
+    </div>
+    <div id="selected_id">Selected Phone ID: <span id="result"></span></div>
+  </body>
+</html>
