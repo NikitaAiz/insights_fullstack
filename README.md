@@ -9,7 +9,7 @@ The website gets a list of phones from a certain API and displays it in a table.
 Each row has also a button that when clicked on, displays the ID of the phone in a seperate element.
 
  The homework consists of a few tasks:
- 1. Fix the data recieved - besides the name all of the fields are showing undefined. In the given columns fill out as much information as you can with the given data. **NOTE: not all fields contain data**
+ 1. Fix the data recieved - besides the name, all of the fields are showing `undefined`. In the given columns fill out as much information as you can with the given data. **NOTE: not all fields contain data**
  2. Fix the "Get Id" functionality - when you press on the button the ID of the phone should be displayed, but currently it shows only one value.
  3. Color the cell of the price, for any price above 500.
  4. Color all odd table rows in `gray` and even table rows in `darkgrey` (or any other color you like)
